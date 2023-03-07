@@ -1,0 +1,13 @@
+metadata:
+  name: learn-opentf-orchestrator
+jobs:
+  my-first-job:
+    runs-on: [linux, robotframework]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: https://github.com/robotframework/RobotDemo.git
+    - uses: robotframework/robot@v1
+      with:
+        datasource: RobotDemo/keyboard_driven.robot
+    - run: ls -l

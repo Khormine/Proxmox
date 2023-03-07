@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    robot-framework-runner:
+        container_name: robotenv
+        environment:
+            PASSWORD_ACCESS: true
+            USER_NAME: ${USERNAME}
+            USER_PASSWORD: ${PASSWORD}
+        image: 'opentestfactory/robot-framework-runner:latest'
